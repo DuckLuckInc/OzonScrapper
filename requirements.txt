@@ -1,0 +1,2 @@
+scrapy==2.5.0
+pymongo==3.11.4

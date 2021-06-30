@@ -1,8 +1,8 @@
 import json
 import scrapy
 from scrapy.http import HtmlResponse
-from OzonScrapper.items import OzonItem
-from OzonScrapper.settings import CATEGORIES, MAX_ITEMS
+from items import OzonItem
+from settings import CATEGORIES, MAX_ITEMS
 
 
 class OzonSpider(scrapy.Spider):

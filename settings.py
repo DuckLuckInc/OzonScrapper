@@ -11,8 +11,8 @@
 
 BOT_NAME = 'OzonScrapper'
 
-SPIDER_MODULES = ['OzonScrapper.spiders']
-NEWSPIDER_MODULE = 'OzonScrapper.spiders'
+SPIDER_MODULES = ['spiders']
+NEWSPIDER_MODULE = 'spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
@@ -31,7 +31,7 @@ LOG_LEVEL = 'DEBUG' # DEBUG INFO ERROR
 # Configure a delay for requests for the same website (default: 0)
 # See https://docs.scrapy.org/en/latest/topics/settings.html#download-delay
 # See also autothrottle settings and docs
-DOWNLOAD_DELAY = 0.75
+DOWNLOAD_DELAY = 1
 # The download delay setting will honor only one of:
 #CONCURRENT_REQUESTS_PER_DOMAIN = 16
 #CONCURRENT_REQUESTS_PER_IP = 16
@@ -69,7 +69,7 @@ COOKIES_ENABLED = True
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-   'OzonScrapper.pipelines.OzonPipeline': 30,
+   'pipelines.OzonPipeline': 30,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
@@ -94,7 +94,7 @@ ITEM_PIPELINES = {
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 
 # Max items from category
-MAX_ITEMS = 5
+MAX_ITEMS = 50
 
 # Ozon categories
 CATEGORIES = [

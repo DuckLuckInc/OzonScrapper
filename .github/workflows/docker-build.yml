@@ -1,0 +1,19 @@
+name: Docker build
+
+on:
+  push:
+
+env:
+  VERSION: 1.0
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Login to DockerHub Registry
+        run: echo ${{ secrets.DOCKERHUB_PASSWORD }} | docker login -u ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin
+      - name: Build Docker api-server image
+        run: docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/ozon-scrapper:${{ env.VERSION }} .
+      - name: Push the api_server image
+        run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/ozon-scrapper:${{ env.VERSION }}
