@@ -147,8 +147,7 @@ $ docker-compose up -d
 
 # Подключение к mongodb
 ```bash
-$ docker exec -it ozonscrapper_mongodb_1 bash
-root@c0de6a4af989:/# mongo
+$ docker exec -it ozonscrapper_mongodb_1 mongo
 MongoDB shell version v4.4.6
 connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
 Implicit session: session { "id" : UUID("bf539482-aef1-4fdd-962b-7b5ddaf079da") }
