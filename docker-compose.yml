@@ -2,7 +2,7 @@ version: '3'
 
 services:
   scrapy:
-    image: duckluckbreakout/ozon-scrapper:1.0
+    image: ozon_scrapper
     restart: unless-stopped
     networks:
       - app-network
