@@ -11,7 +11,7 @@ from pymongo import MongoClient
 
 class OzonPipeline(object):
     def __init__(self):
-        client = MongoClient('localhost', 27017)
+        client = MongoClient('mongodb', 27017)
         self.mongobase = client.ozon
 
     def process_item(self, item: Item, spider):

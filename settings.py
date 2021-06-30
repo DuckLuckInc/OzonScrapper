@@ -11,8 +11,8 @@
 
 BOT_NAME = 'OzonScrapper'
 
-SPIDER_MODULES = ['OzonScrapper.spiders']
-NEWSPIDER_MODULE = 'OzonScrapper.spiders'
+SPIDER_MODULES = ['spiders']
+NEWSPIDER_MODULE = 'spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
@@ -69,7 +69,7 @@ COOKIES_ENABLED = True
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-   'OzonScrapper.pipelines.OzonPipeline': 30,
+   'pipelines.OzonPipeline': 30,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
