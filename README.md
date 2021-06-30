@@ -71,7 +71,7 @@
                                  "name": "Стандарт Wi-Fi",
                                  "values": [{"key": "WiFiRouterStandart_0",
                                              "text": "Wi-Fi 5 (802.11ac)"}]}],
-                      "title": "},
+                      "title": ""},
   "collection": "Ozon Express",
   "description": {"@context": "http://schema.org",
                   "@type": "Product",
