@@ -145,6 +145,55 @@ $ docker build -t ozon_scrapper .
 $ docker-compose up -d
 ```
 
+# Подключение к mongodb
+```bash
+$ docker exec -it ozonscrapper_mongodb_1 bash
+root@c0de6a4af989:/# mongo
+MongoDB shell version v4.4.6
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("bf539482-aef1-4fdd-962b-7b5ddaf079da") }
+MongoDB server version: 4.4.6
+Welcome to the MongoDB shell.
+For interactive help, type "help".
+For more comprehensive documentation, see
+	https://docs.mongodb.com/
+Questions? Try the MongoDB Developer Community Forums
+	https://community.mongodb.com
+---
+The server generated these startup warnings when booting:
+        2021-06-30T17:41:18.576+00:00: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+---
+---
+        Enable MongoDB\'s free cloud-based monitoring service, which will then receive and display
+        metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+        The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+        and anyone you share the URL with. MongoDB may use this information to make product
+        improvements and to suggest MongoDB products and deployment options to you.
+
+        To enable free monitoring, run the following command: db.enableFreeMonitoring()
+        To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+---
+> show collections
+> ()
+uncaught exception: SyntaxError: expected expression, got ')' :
+@(shell):1:1
+> show dbs
+admin   0.000GB
+config  0.000GB
+local   0.000GB
+ozon    0.001GB
+> use ozon
+switched to db ozon
+> show collections
+Ozon Express
+Дом и сад
+Обувь
+Одежда
+Электроника
+>
+```
+
 
 #  Изменение настроек
 
