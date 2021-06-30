@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  scrapy:
+    image: ozon_scrapper
+    restart: unless-stopped
+    networks:
+      - app-network
+  mongodb:
+    image: mongo
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    networks:
+      - app-network
+networks:
+  app-network:
+    driver: bridge
